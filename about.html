@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | M4ng4</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url('images/anime-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh; /* Ensures the page takes up full height */
+    }
+  
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed; /* Fixed to cover the entire viewport */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; /* Ensures it spans the entire height */
+      z-index: 1; /* Positioned below the content */
+    }
+  
+    .content {
+      position: relative;
+      z-index: 2; /* Ensures content is above the overlay */
+      padding: 4rem;
+    }
+  
+    #music-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+  </style>
+  
+</head>
+<body onclick="enableMusic()">
+  <div class="overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark z-2 position-relative">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">M4ng4</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content container">
+    <h1 class="display-4 mb-4 text-warning">M4ng4</h1>
+    <p class="lead">
+      Welcome to <strong>M4ng4</strong>, your ultimate destination for everything anime! Inspired by platforms like Crunchyroll,
+      M4ng4 lets you explore a wide range of anime titles, both new and classic.
+    </p>
+    <p>
+      Users can browse anime, view trailers, and even <strong>read or watch full episodes</strong> through direct links. Love a series? 
+      Just click <strong>"Add to Favorites"</strong> and keep track of your personal anime collection!
+    </p>
+    <p>
+      What makes M4ng4 more fun? <strong>Click anywhere on the screen</strong> to start background music that sets the anime mood while you browse.
+    </p>
+    <p>
+      Dive into your favorite worlds, discover hidden gems, and enjoy anime the way it's meant to be experienced — anytime, anywhere.
+    </p>
+  
+    <!-- Business, History, Mission, and Values Section -->
+    <h2 class="text-primary mt-5">About M4ng4</h2>
+    <p><strong>M4ng4</strong> was founded in 2025 with the aim of bringing the best of anime and manga culture to the Filipino community and beyond. As an anime-centric platform, M4ng4 was created by passionate fans who wanted to share their love for Japanese animation and manga with others, especially in the Philippines, where anime culture has deeply resonated for decades.</p>
+  
+    <h3 class="text-success">Our History</h3>
+    <p>Starting as a small, fan-driven community, M4ng4 began as a place for Filipino anime enthusiasts to gather and share their favorite titles. As anime’s popularity surged, we realized the need for a reliable, local platform to provide access to a vast library of content. We launched the platform with a focus on providing users with easy access to streaming anime, in addition to exclusive content, trailers, and news about their favorite series.</p>
+  
+    <h3 class="text-success">Our Mission</h3>
+    <p>Our mission is to offer an engaging, user-friendly experience for anime and manga fans worldwide, with a special emphasis on Filipino viewers. We aim to connect fans to their favorite anime, create a welcoming community, and promote the rich culture of anime through educational and entertainment content. At M4ng4, we are committed to making anime more accessible to everyone, anywhere, and anytime.</p>
+  
+    <h3 class="text-success">Our Values</h3>
+    <ul>
+      <li><strong>Inclusivity:</strong> We believe anime is for everyone, regardless of background, age, or experience. Our platform is designed to be accessible to anime newcomers and die-hard fans alike.</li>
+      <li><strong>Community:</strong> We value the relationships built among our users, fostering a space where people can connect, discuss, and share their favorite series.</li>
+      <li><strong>Quality:</strong> We are dedicated to offering the best viewing experience with high-quality video content, user-friendly features, and up-to-date information about the anime world.</li>
+      <li><strong>Passion:</strong> At our core, M4ng4 was founded by fans, for fans. Our passion for anime and manga drives everything we do, from curating content to innovating new ways for users to engage with their favorite series.</li>
+      <li><strong>Cultural Appreciation:</strong> We aim to introduce global audiences to the beauty of Japanese culture through anime and manga, while honoring the vibrant local anime community in the Philippines.</li>
+    </ul>
+  </div>
+  
+</body>
+</html>

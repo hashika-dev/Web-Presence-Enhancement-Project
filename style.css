@@ -1,0 +1,136 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f8f5f2;
+    margin: 0;
+    padding: 0;
+    background: url('images/one\ piece.gif') repeat;
+    background-size: cover;
+    background-attachment: fixed;  /* This will keep the background fixed during scrolling */
+    animation: moveBackground 60s linear infinite;
+}
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 0;
+    }
+}
+#mute-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+
+html, body {
+    height: 100%;
+}
+
+.elevated-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with opacity */
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #ffffff; /* White border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Shadow to give it elevation */
+    max-width: 600px;
+    margin: auto;
+    color: #000; /* Dark text for contrast */
+  }
+  
+
+
+.text-gold {
+    color: #b8860b;
+}
+
+.product-image {
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.product-image:hover {
+    transform: scale(1.1); 
+}
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+footer {
+    background: #222;
+    color: #fff;
+}
+.card-img-top {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.pixel-link {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    background-color: #000;
+    color: #0ff;
+    padding: 8px 12px;
+    border: 2px solid #0ff;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    box-shadow: 3px 3px #0ff;
+    transition: 0.3s;
+}
+
+.pixel-link:hover {
+    background-color: #0ff;
+    color: #000;
+    box-shadow: 3px 3px #000;
+}
+
+.manga-link {
+    font-family: 'Comic Neue', cursive;
+    font-size: 18px;
+    color: #222;
+    text-decoration: none;
+    background: linear-gradient(135deg, #fff, #eee);
+    padding: 10px 14px;
+    border: 1px solid #000;
+    box-shadow: 3px 3px #aaa;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.manga-link:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px #666;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+

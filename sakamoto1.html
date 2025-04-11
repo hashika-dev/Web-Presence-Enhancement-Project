@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakamoto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Sakamoto Days</a>
+        </div>
+    </nav>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="music/saka1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <button onclick="toggleMute()" id="mute-btn" class="btn btn-secondary">Mute</button>
+
+   <script>
+    const music = document.getElementById("bg-music");
+    const btn = document.getElementById("mute-btn");
+
+    window.addEventListener('click', function () {
+      music.muted = false;
+      music.play();
+    }, { once: true });
+      // Restart music on click if it's ended
+
+    music.addEventListener("ended", function () {
+    window.addEventListener("click", function () {
+    music.currentTime = 0;
+    music.play();
+    }, { once: true }); // Only once to avoid stacking events
+    });
+
+    function toggleMute() {
+      if (music.muted) {
+        music.muted = false;
+        btn.innerText = "Mute";
+      } else {
+        music.muted = true;
+        btn.innerText = "Unmute";
+      }
+    }
+  </script>
+
+    
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/sakamoto.jpg" class="img-fluid fade-in" >
+            </div>
+            <div class="elevated-box">
+                <h2 class="text-gold">Sakamoto Days</h2>
+                <p><strong>Volumes:</strong> 22</p>
+                <p><strong>Price:</strong> ₱13,200</p>
+<p>
+    The story revolves around Taro Sakamoto, a retired legendary hitman who has settled into a quiet and mundane life as a family man. However, his peaceful life is disrupted when former enemies and colleagues from his hitman days come seeking revenge.
+</p>                <a href="index.html" class="btn btn-dark mt-3">Back to Home</a>
+                    <a onclick="addToFavorites('Sakamoto Days')" class="btn btn-dark mt-3">Add to Favorites</a>
+                    <a onclick="openFavorites()" class="btn btn-dark mt-3">View Favorites</a>
+                    <div class="mt-4">
+                      <a href="https://aniwatchtv.to/sakamoto-days-19431?ref=search" class="pixel-link">ANIME</a>
+                      <a href="https://comick.io/comic/sakamoto-days" class="manga-link">MANGA</a>
+                    </div>
+                    <script src="favorites.js"></script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

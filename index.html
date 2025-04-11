@@ -1,0 +1,222 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manga | Home</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+
+    <!-- View Favorites Button -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">m4ng4</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="favorites.html">Favorites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Manga Collection -->
+<div class="container my-5">
+    <h2 class="text-center text-gold mb-4">ANIME</h2>
+
+    <div class="row g-4">
+
+        <!-- Wistoria -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/wistoria.jpg" class="card-img-top" alt="Wistoria">
+                <div class="card-body">
+                    <h5 class="card-title">Wistoria: Wand and Sword</h5>
+                    <p>By Fujino Ōmori | 11 Volumes</p>
+                    <a href="wistoria1.html" class="btn btn-dark">View</a>
+                    <button class="btn btn-warning" onclick="addToFavorites('Wistoria: Wand and Sword')">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gachiakuta -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/dada" class="card-img-top" alt="Dandadan">
+                <div class="card-body">
+                    <h5 class="card-title">Dandadan</h5>
+                    <p>By  Yukinobu Tatsu | 19 Volumes</p>
+                    <a href="dada1.html" class="btn btn-dark">View</a>
+                    <button class="btn btn-warning" onclick="addToFavorites('Dandadan')">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Haikyu -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/haikyuuu.png" class="card-img-top" alt="Haikyu!!">
+                <div class="card-body">
+                    <h5 class="card-title">Haikyu!!</h5>
+                    <p>By Haruichi Furudate | 45 Volumes</p>
+                    <a href="haikyu1.html" class="btn btn-dark">View</a>
+                    <button class="btn btn-warning" onclick="addToFavorites('Haikyu!!')">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slime -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/slime.jpg" class="card-img-top" alt="Slime">
+                <div class="card-body">
+                    <h5 class="card-title">That Time I Got Reincarnated as a Slime</h5>
+                    <p>By Fuse | 26 Volumes</p>
+                    <a href="slime1.html" class="btn btn-dark">View</a>
+                    <button class="btn btn-warning" onclick="addToFavorites('Slime')">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sakamoto Days -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/sakamoto.jpg" class="card-img-top" alt="Sakamoto Days">
+                <div class="card-body">
+                    <h5 class="card-title">Sakamoto Days</h5>
+                    <p>By Yuto Suzuki | 21 Volumes</p>
+                    <a href="sakamoto1.html" class="btn btn-dark">View</a>
+                    <button class="btn btn-warning" onclick="addToFavorites('Sakamoto Days')">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Black Clover -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/black.jpg" class="card-img-top" alt="Black Clover">
+                <div class="card-body">
+                    <h5 class="card-title">Black Clover</h5>
+                    <p>By Yūki Tabata | 35 Volumes</p>
+                    <a href="black1.html" class="btn btn-dark">View</a>
+                    <button class="btn btn-warning" onclick="addToFavorites('Black Clover')">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vinland Saga -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/vinland.jpg" class="card-img-top" alt="Vinland Saga">
+                <div class="card-body">
+                    <h5 class="card-title">Vinland Saga</h5>
+                    <p>By Makoto Yukimura | 27 Volumes</p>
+                    <a href="vinland1.html" class="btn btn-dark">View</a>
+                    <button class="btn btn-warning" onclick="addToFavorites('Vinland Saga')">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chainsaw Man -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/chain.jpg" class="card-img-top" alt="Chainsaw Man">
+                <div class="card-body">
+                    <h5 class="card-title">Chainsaw Man</h5>
+                    <p>By Tatsuki Fujimoto | 15 Volumes</p>
+                    <a href="chain1.html" class="btn btn-dark">View</a>
+                    <button class="btn btn-warning" onclick="addToFavorites('Chainsaw Man')">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+        <!-- Alya Sometimes Hides Her Feelings in Russian -->
+<div class="col-md-4">
+    <div class="card h-100">
+        <img src="images/alya.jpg" class="card-img-top" alt="Alya">
+        <div class="card-body">
+            <h5 class="card-title">Alya Sometimes Hides Her Feelings in Russian</h5>
+            <p>By SunSunSun | Light Novel Series</p>
+            <a href="alya1.html" class="btn btn-dark">View</a>
+            <button class="btn btn-warning" onclick="addToFavorites('Alya Sometimes Hides Her Feelings in Russian')">Add to Favorites</button>
+        </div>
+    </div>
+</div>
+
+<!-- Tokyo Ghoul -->
+<div class="col-md-4">
+    <div class="card h-100">
+        <img src="images/tokyo.jpg" class="card-img-top" alt="Tokyo Ghoul">
+        <div class="card-body">
+            <h5 class="card-title">Tokyo Ghoul</h5>
+            <p>By Sui Ishida | 14 Volumes</p>
+            <a href="tokyo1.html" class="btn btn-dark">View</a>
+            <button class="btn btn-warning" onclick="addToFavorites('Tokyo Ghoul')">Add to Favorites</button>
+        </div>
+    </div>
+</div>
+
+<!-- Your Lie in April -->
+<div class="col-md-4">
+    <div class="card h-100">
+        <img src="images/april.jpg" class="card-img-top" alt="Your Lie in April">
+        <div class="card-body">
+            <h5 class="card-title">Your Lie in April</h5>
+            <p>By Naoshi Arakawa | 11 Volumes</p>
+            <a href="april1.html" class="btn btn-dark">View</a>
+            <button class="btn btn-warning" onclick="addToFavorites('Your Lie in April')">Add to Favorites</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card h-100">
+        <img src="images/qu" class="card-img-top" alt="The Quintessential Quintuplets">
+        <div class="card-body">
+            <h5 class="card-title">The Quintessential Quintuplets</h5>
+            <p>By Negi Haruba | 14 Volumes</p>
+            <a href="quin1.html" class="btn btn-dark">View</a>
+            <button class="btn btn-warning" onclick="addToFavorites('The Quintessential Quintuplets')">Add to Favorites</button>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+<script src="favorites.js"></script>
+<script>
+    window.onload = displayFavorites;
+</script>
+        </div>
+
+        <footer id="contact" class="text-center bg-dark text-light py-4">
+            <p>&copy; M4ng4 | Follow me on 
+                <a href="https://www.instagram.com/kurtyboiii?igsh=dzNhMGFidjY2eXEz" class="text-info">Instagram</a> | 
+                <a href="https://www.facebook.com/share/16G3WY9ipQ/" class="text-info">Facebook</a>
+            </p>
+            <p><strong>Address:</strong> 123 Otaku Street, Tokyo-to, Japan</p>
+            <p><strong>Phone:</strong> +63 085 297 7271</p>
+            <p><strong>Email:</strong> <a href="kurtumali06@gmail.com" class="text-info">kurtumali06@gmail.com</a></p>
+        </footer>
+        
+
+    </body>
+    </html>

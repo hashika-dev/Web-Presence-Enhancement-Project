@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Ghoul</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tokyo Ghoul</a>
+        </div>
+    </nav>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="music/tokyo 1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <button onclick="toggleMute()" id="mute-btn" class="btn btn-secondary">Mute</button>
+
+   <script>
+    const music = document.getElementById("bg-music");
+    const btn = document.getElementById("mute-btn");
+
+    window.addEventListener('click', function () {
+      music.muted = false;
+      music.play();
+    }, { once: true });
+      // Restart music on click if it's ended
+
+    music.addEventListener("ended", function () {
+    window.addEventListener("click", function () {
+    music.currentTime = 0;
+    music.play();
+    }, { once: true }); // Only once to avoid stacking events
+    });
+
+    function toggleMute() {
+      if (music.muted) {
+        music.muted = false;
+        btn.innerText = "Mute";
+      } else {
+        music.muted = true;
+        btn.innerText = "Unmute";
+      }
+    }
+  </script>
+
+    
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/tokyo.jpg" class="img-fluid fade-in" >
+            </div>
+            <div class="elevated-box">
+                <h2 class="text-gold">Tokyo Ghoul</h2>
+                <p><strong>Volumes:</strong> 30</p>
+                <p><strong>Price:</strong> ₱4.583.35</p>
+                <P>The story is set in an alternate version of Tokyo where humans coexist with ghouls, beings who look like humans but can only survive by eating human flesh. Ken Kaneki is a college student who is transformed into a half-ghoul after an encounter with one of them. He must navigate the complex social and political dynamics between humans and ghouls while struggling to maintain his humanity.</P>
+                <a href="index.html" class="btn btn-dark mt-3">Back to Home</a>
+                <a onclick="addToFavorites('Tokyo Ghoul')" class="btn btn-dark mt-3">Add to Favorites</a>
+                <a onclick="openFavorites()" class="btn btn-dark mt-3">View Favorites</a>
+                <div class="mt-4">
+                  <a href="https://aniwatchtv.to/tokyo-ghoul-790?ref=search" class="pixel-link">ANIME</a>
+                  <a href="https://comick.io/comic/tokyo-ghoul" class="manga-link">MANGA</a>
+                </div>
+                <script src="favorites.js"></script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

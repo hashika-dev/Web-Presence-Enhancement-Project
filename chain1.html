@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chainsaw</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Chainsaw Man</a>
+        </div>
+    </nav>
+
+    
+    <audio id="bg-music" autoplay loop>
+        <source src="music/chain1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <button onclick="toggleMute()" id="mute-btn" class="btn btn-secondary">Mute</button>
+
+   <script>
+    const music = document.getElementById("bg-music");
+    const btn = document.getElementById("mute-btn");
+
+    window.addEventListener('click', function () {
+      music.muted = false;
+      music.play();
+    }, { once: true });
+      // Restart music on click if it's ended
+
+    music.addEventListener("ended", function () {
+    window.addEventListener("click", function () {
+    music.currentTime = 0;
+    music.play();
+    }, { once: true }); // Only once to avoid stacking events
+    });
+
+    function toggleMute() {
+      if (music.muted) {
+        music.muted = false;
+        btn.innerText = "Mute";
+      } else {
+        music.muted = true;
+        btn.innerText = "Unmute";
+      }
+    }
+  </script>
+
+
+    
+    <div class="container my-5">
+        <div class="row">
+            <div class="eke">
+                <img src="images/chain.jpg" class="img-fluid fade-in" >
+            </div>
+            <div class="elevated-box">
+                <h2 class="text-gold">Chainsaw Man</h2>
+                <p><strong>Volumes:</strong> 19</p>
+                <p><strong>Price:</strong> ₱11,400</p>
+                <p>Chainsaw Man follows the story of Denji, an impoverished teenager who makes a contract that fuses his body with that of Pochita, the dog-like Chainsaw Devil, granting him the ability to transform parts of his body into chainsaws. Denji eventually joins the Public Safety Devil Hunters, a government agency focused on fighting against Devils whenever they become a threat to Japan. The second arc of the story focuses on Asa Mitaka, a high school student who enters into a contract with Yoru, the War Devil, who forces her to hunt down Chainsaw Man in order to reclaim what he had stolen from her.</p>
+                <a href="index.html" class="btn btn-dark mt-3">Back to Home</a>
+                <a onclick="addToFavorites('Chainsaw Man')" class="btn btn-dark mt-3">Add to Favorites</a>
+                <a onclick="openFavorites()" class="btn btn-dark mt-3">View Favorites</a>
+                <div class="mt-4">
+                  <a href="https://aniwatchtv.to/chainsaw-man-17406?ref=search" class="pixel-link">ANIME</a>
+                  <a href="https://comick.io/comic/00-chainsaw-man" class="manga-link">MANGA</a>
+                </div>
+                <script src="favorites.js"></script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
