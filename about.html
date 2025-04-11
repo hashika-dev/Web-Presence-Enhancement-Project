@@ -16,25 +16,25 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      height: 100vh; /* Ensures the page takes up full height */
+      height: 100vh;
     }
-  
+
     .overlay {
       background-color: rgba(0, 0, 0, 0.7);
-      position: fixed; /* Fixed to cover the entire viewport */
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0; /* Ensures it spans the entire height */
-      z-index: 1; /* Positioned below the content */
+      bottom: 0;
+      z-index: 1;
     }
-  
+
     .content {
       position: relative;
-      z-index: 2; /* Ensures content is above the overlay */
+      z-index: 2;
       padding: 4rem;
     }
-  
+
     #music-toggle {
       position: fixed;
       bottom: 20px;
@@ -42,7 +42,6 @@
       z-index: 9999;
     }
   </style>
-  
 </head>
 <body onclick="enableMusic()">
   <div class="overlay"></div>
@@ -66,7 +65,17 @@
 
   <!-- Main Content -->
   <div class="content container">
-    <h1 class="display-4 mb-4 text-warning">M4ng4</h1>
+    <!-- Hero Section -->
+    <div class="p-5 mb-4 bg-dark rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-4 fw-bold text-warning">Welcome to M4ng4</h1>
+        <p class="fs-5 text-white">
+          Your ultimate anime destination, made by fans, for fans. Watch. Read. Favorite. Feel the world of anime like never before.
+        </p>
+        <a href="index.html" class="btn btn-warning btn-lg mt-3">Explore Now</a>
+      </div>
+    </div>
+
     <p class="lead">
       Welcome to <strong>M4ng4</strong>, your ultimate destination for everything anime! Inspired by platforms like Crunchyroll,
       M4ng4 lets you explore a wide range of anime titles, both new and classic.
@@ -81,26 +90,60 @@
     <p>
       Dive into your favorite worlds, discover hidden gems, and enjoy anime the way it's meant to be experienced — anytime, anywhere.
     </p>
-  
-    <!-- Business, History, Mission, and Values Section -->
+
+    <!-- About Section -->
     <h2 class="text-primary mt-5">About M4ng4</h2>
-    <p><strong>M4ng4</strong> was founded in 2025 with the aim of bringing the best of anime and manga culture to the Filipino community and beyond. As an anime-centric platform, M4ng4 was created by passionate fans who wanted to share their love for Japanese animation and manga with others, especially in the Philippines, where anime culture has deeply resonated for decades.</p>
-  
+    <p><strong>M4ng4</strong> was founded in 2025 with the aim of bringing the best of anime and manga culture to the Filipino community and beyond.</p>
+
     <h3 class="text-success">Our History</h3>
-    <p>Starting as a small, fan-driven community, M4ng4 began as a place for Filipino anime enthusiasts to gather and share their favorite titles. As anime’s popularity surged, we realized the need for a reliable, local platform to provide access to a vast library of content. We launched the platform with a focus on providing users with easy access to streaming anime, in addition to exclusive content, trailers, and news about their favorite series.</p>
-  
+    <p>Starting as a small, fan-driven community, M4ng4 began as a place for Filipino anime enthusiasts to gather and share their favorite titles.</p>
+
     <h3 class="text-success">Our Mission</h3>
-    <p>Our mission is to offer an engaging, user-friendly experience for anime and manga fans worldwide, with a special emphasis on Filipino viewers. We aim to connect fans to their favorite anime, create a welcoming community, and promote the rich culture of anime through educational and entertainment content. At M4ng4, we are committed to making anime more accessible to everyone, anywhere, and anytime.</p>
-  
+    <p>Our mission is to offer an engaging, user-friendly experience for anime and manga fans worldwide, with a special emphasis on Filipino viewers.</p>
+
     <h3 class="text-success">Our Values</h3>
     <ul>
-      <li><strong>Inclusivity:</strong> We believe anime is for everyone, regardless of background, age, or experience. Our platform is designed to be accessible to anime newcomers and die-hard fans alike.</li>
-      <li><strong>Community:</strong> We value the relationships built among our users, fostering a space where people can connect, discuss, and share their favorite series.</li>
-      <li><strong>Quality:</strong> We are dedicated to offering the best viewing experience with high-quality video content, user-friendly features, and up-to-date information about the anime world.</li>
-      <li><strong>Passion:</strong> At our core, M4ng4 was founded by fans, for fans. Our passion for anime and manga drives everything we do, from curating content to innovating new ways for users to engage with their favorite series.</li>
-      <li><strong>Cultural Appreciation:</strong> We aim to introduce global audiences to the beauty of Japanese culture through anime and manga, while honoring the vibrant local anime community in the Philippines.</li>
+      <li><strong>Inclusivity:</strong> We believe anime is for everyone.</li>
+      <li><strong>Community:</strong> We value the relationships built among our users.</li>
+      <li><strong>Quality:</strong> We are dedicated to offering the best viewing experience.</li>
+      <li><strong>Passion:</strong> M4ng4 was founded by fans, for fans.</li>
+      <li><strong>Cultural Appreciation:</strong> We aim to introduce global audiences to the beauty of Japanese culture through anime and manga.</li>
     </ul>
+
+    <!-- Bootstrap Card Section -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+      <div class="col">
+        <div class="card bg-dark text-white h-100">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Inclusivity</h5>
+            <p class="card-text">We welcome anime lovers of all kinds, whether you're new or a long-time fan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-white h-100">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Community</h5>
+            <p class="card-text">We grow together — discuss, recommend, and connect over anime you love.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-white h-100">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Quality</h5>
+            <p class="card-text">We focus on the best anime experience: clean design, fast streaming, and smooth browsing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white py-3 mt-5 z-2 position-relative">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 M4ng4. Made with ❤️ in the Philippines.</p>
+    </div>
+  </footer>
 </body>
 </html>
